@@ -1,0 +1,16 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%;
+    background-color: #00214a;
+    color: #fff;
+    &__title{
+       margin: 0; 
+    }
+    &__text{
+        span{
+            font-weight: 600;
+        }
+    }
+}

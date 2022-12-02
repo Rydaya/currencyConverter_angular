@@ -1,0 +1,49 @@
+<div>
+  <app-header></app-header>
+  <div class="main">
+    <div class="converter">
+      <div class="converter__currency">
+        <div class="converter__select">
+          <select
+            #baseCurrencySelect
+            (change)="
+              convert(baseCurrencySelect.value, convertedCurrencySelect.value, baseCurrencyCountInput.value)
+            "
+          >
+            <option value="USD">USD</option>
+            <option value="UAH">UAH</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+        <input
+          #baseCurrencyCountInput
+          type="number"
+          value="{{ baseCurrencyCount }}"
+          (input)="changeBaseCurrencyCount(baseCurrencyCountInput.value)"
+        />
+      </div>
+      <div class="converter__currency">
+        <div class="converter__select">
+          <select
+            #convertedCurrencySelect
+            (change)="
+              convert(baseCurrencySelect.value, convertedCurrencySelect.value, baseCurrencyCountInput.value)
+            "
+          >
+            <option value="UAH">UAH</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+        <input
+          #convertedCurrencyCountInput
+          type="number"
+          value="{{ convertedCurrencyCount }}"
+          (input)="
+            changeConvertedCurrencyCount(convertedCurrencyCountInput.value)
+          "
+        />
+      </div>
+    </div>
+  </div>
+</div>

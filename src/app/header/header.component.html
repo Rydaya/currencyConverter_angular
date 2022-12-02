@@ -1,0 +1,11 @@
+<header class="header">
+  <h1 class="header__title">
+    {{ title }}
+  </h1>
+  <div class="header__block">
+    <p class="header__text" *ngFor="let mainCurrency of mainCurrencies">
+      <span>1 {{ extractKeyCurrency(mainCurrency) }} to UAH</span> :
+      {{ extractValueCurrency(mainCurrency) }}
+    </p>
+  </div>
+</header>
